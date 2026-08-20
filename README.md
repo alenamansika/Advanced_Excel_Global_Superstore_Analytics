@@ -41,7 +41,7 @@ Menampilkan tren penjualan tahunan global (2011–2014) yang terhubung dengan **
 ---
 
 ### 2. Interactive Histogram with Regional Breakdown
-Mengelompokkan 51.290 transaksi ke dalam 6 rentang harga belanja, dilengkapi dengan **Slicer 6-Kolom Horizontal** dan tabel rincian kontribusi *Region* menggunakan *Conditional Formatting Data Bars*.
+Mengelompokkan 51.285 transaksi ke dalam 6 rentang harga belanja, dilengkapi dengan **Slicer 6-Kolom Horizontal** dan tabel rincian kontribusi *Region* menggunakan *Conditional Formatting Data Bars*.
 * **Key Insight:** Distribusi menunjukkan pola *Positive Skewness* di mana **80%+ transaksi global** berada pada rentang rendah (`$0–$99` sebanyak 56,19% dan `$100–$299` sebanyak 23,89%). Terdapat anomali peningkatan di kelompok **`$900+`** (5,26%) yang mengindikasikan transaksi dari segmen *Corporate Enterprise* (pembelian grosir).
 
 ![Chart 2 - Interactive Histogram with Regional Breakdown & Slicer](chart2_histogram.jpeg)
@@ -69,4 +69,4 @@ Grafik distribusi frekuensi pelanggan (*# of Customer*) berdasarkan 9 kelompok d
 * `Advanced_Excel_Global_Superstore_Analytics.xlsx` : File kerja utama Excel.
 * **`Order Data`** : Sheet data mentah (*raw data*) 51.285 baris transaksi setelah *cleaning* & *feature engineering*.
 * **`Advanced_Charting_Techniques`** : Sheet utama berisi *staging tables*, Pivot Tables, Slicers, Form Controls, dan 4 *Advanced Dynamic Charts*.
-* 📝 **Medium Article:** [Sematkan Tautan Artikel Medium Kamu di Sini]
+* 📝 **Medium Article:** [https://medium.com/@alenamansika723/analyzing-global-superstore-dynamic-performance-in-excel-an-advanced-charting-interactive-fed6206a4665?postPublishedType=repub]
