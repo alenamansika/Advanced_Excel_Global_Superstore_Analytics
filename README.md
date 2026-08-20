@@ -1,7 +1,7 @@
 # 📊 Global Superstore Advanced Analytics (Advanced Excel Interactive Charts)
 
 ## 📌 Project Overview
-Proyek ini menganalisis data transaksi global **Global Superstore Dataset (51.290 transaksi)** menggunakan teknik **Combination Charts & Dynamic Chart Form Control** untuk menghasilkan analisis visual yang dinamis, otomatis, dan berstandar industri. 
+Proyek ini menganalisis data transaksi global **Global Superstore Dataset (51.285 transaksi)** menggunakan teknik **Combination Charts & Dynamic Chart Form Control** untuk menghasilkan analisis visual yang dinamis, otomatis, dan berstandar industri. 
 
 Analisis ini mencakup deteksi tren tahunan (*YoY Variance*), segmentasi ukuran transaksi, analisis pola musiman (*seasonality benchmark*), hingga sensitivitas penetrasi diskon pelanggan menggunakan kontrol interaktif.
 
@@ -67,6 +67,6 @@ Grafik distribusi frekuensi pelanggan (*# of Customer*) berdasarkan 9 kelompok d
 ## 📁 Repository Structure
 
 * `Advanced_Excel_Global_Superstore_Analytics.xlsx` : File kerja utama Excel.
-* **`Order Data`** : Sheet data mentah (*raw data*) 51.290 baris transaksi setelah *cleaning* & *feature engineering*.
+* **`Order Data`** : Sheet data mentah (*raw data*) 51.285 baris transaksi setelah *cleaning* & *feature engineering*.
 * **`Advanced_Charting_Techniques`** : Sheet utama berisi *staging tables*, Pivot Tables, Slicers, Form Controls, dan 4 *Advanced Dynamic Charts*.
 * 📝 **Medium Article:** [Sematkan Tautan Artikel Medium Kamu di Sini]
