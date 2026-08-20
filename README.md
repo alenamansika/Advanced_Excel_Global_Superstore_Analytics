@@ -3,7 +3,7 @@
 ## 📌 Project Overview
 Proyek ini menganalisis data transaksi global **Global Superstore Dataset (51.285 transaksi)** menggunakan teknik **Combination Charts & Dynamic Chart Form Control** untuk menghasilkan analisis visual yang dinamis, otomatis, dan berstandar industri. 
 
-Analisis ini mencakup deteksi tren tahunan (*YoY Variance*), segmentasi ukuran transaksi, analisis pola musiman (*seasonality benchmark*), hingga sensitivitas penetrasi diskon pelanggan menggunakan kontrol interaktif.
+Analisis ini melacak pertumbuhan tahunan, mengelompokkan nilai transaksi, memetakan pola musiman, serta menguji efek diskon terhadap pelanggan melalui fitur interaktif.
 
 ---
 
