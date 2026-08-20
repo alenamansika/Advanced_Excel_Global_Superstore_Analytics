@@ -36,7 +36,7 @@ Analisis ini mencakup deteksi tren tahunan (*YoY Variance*), segmentasi ukuran t
 Menampilkan tren penjualan tahunan global (2011–2014) yang terhubung dengan **Slicer Region**. Dilengkapi indikator panah hijau/merah (*Custom Error Bars*) dan label persentase *growth* otomatis.
 * **Key Insight:** Penjualan global tumbuh pesat dari **$2.259K (2011)** ke **$2.677K (2012)** (**+18,5%**), namun turun pada **2013** menjadi **$2.384K** (**-11,0%**) akibat krisis *Global Supply Chain Bottleneck*, sebelum akhirnya melonjak tajam pada **2014** mencapai **$4.299K** (**+80,4%**).
 
-![Chart 1 - Year over Year (YoY) Sales Trend with Percentage Growth & Error Bars](chart1_yoy_trend.jpg)
+![Chart 1 - Year over Year (YoY) Sales Trend with Percentage Growth & Error Bars]![Chart 1](chart1_yoy_trend.jpeg)
 
 ---
 
@@ -44,7 +44,7 @@ Menampilkan tren penjualan tahunan global (2011–2014) yang terhubung dengan **
 Mengelompokkan 51.290 transaksi ke dalam 6 rentang harga belanja, dilengkapi dengan **Slicer 6-Kolom Horizontal** dan tabel rincian kontribusi *Region* menggunakan *Conditional Formatting Data Bars*.
 * **Key Insight:** Distribusi menunjukkan pola *Positive Skewness* di mana **80%+ transaksi global** berada pada rentang rendah (`$0–$99` sebanyak 56,19% dan `$100–$299` sebanyak 23,89%). Terdapat anomali peningkatan di kelompok **`$900+`** (5,26%) yang mengindikasikan transaksi dari segmen *Corporate Enterprise* (pembelian grosir).
 
-![Chart 2 - Interactive Histogram with Regional Breakdown & Slicer](chart2_histogram.jpg)
+![Chart 2 - Interactive Histogram with Regional Breakdown & Slicer]![Chart 2](chart2_histogram.jpeg)
 
 ---
 
@@ -52,7 +52,7 @@ Mengelompokkan 51.290 transaksi ke dalam 6 rentang harga belanja, dilengkapi den
 *Combination Chart* ganda yang membandingkan rata-rata nilai penjualan per transaksi tahun berjalan dengan garis pangkal rata-rata musiman bulanan historis (2011–2014) secara dinamis via **Slicer Year**.
 * **Key Insight:** Mengidentifikasi siklus musiman bisnis (*commercial seasonality*): puncak penjualan awal tahun terjadi di **Maret (Q1 Peak)**, dilanjutkan masa sepi di **April ($207)**, sebelum mencapai puncak utama pada **September ($276)** hingga **Desember ($264)** (*Year-End Holiday Peak*).
 
-![Chart 3 - Annual Trend with Monthly Detail & Slicer Year](chart3_seasonality.jpg)
+![Chart 3 - Annual Trend with Monthly Detail & Slicer Year]![Chart 3](chart3_seasonality.jpeg)
 
 ---
 
@@ -60,7 +60,7 @@ Mengelompokkan 51.290 transaksi ke dalam 6 rentang harga belanja, dilengkapi den
 Grafik distribusi frekuensi pelanggan (*# of Customer*) berdasarkan 9 kelompok diskon yang dapat digeser secara interaktif menggunakan komponen **Form Control Scroll Bar** dan rumus `OFFSET`.
 * **Key Insight:** Terjadi pola *Bimodal Distribution* (Dua Puncak Ekstrem) pada strategi promosi, di mana transaksi berpusat pada diskon standar **`0–20%` (51,13%)** dan diskon pembersihan stok lama / *deadstock liquidation* **`91%+` (40,72%)**.
 
-![Chart 4 - Frequency Distribution Chart with Scroll Bar](chart4_frequency_scrollbar.jpg)
+![Chart 4 - Frequency Distribution Chart with Scroll Bar](chart4_frequency_scrollbar.jpeg)
 
 ---
 
