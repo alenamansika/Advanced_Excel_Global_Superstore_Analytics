@@ -34,7 +34,7 @@ Analisis ini melacak pertumbuhan tahunan, mengelompokkan nilai transaksi, memeta
 
 ### 1. YoY Sales Trend with Percentage Growth & Error Bars
 Menampilkan tren penjualan tahunan global (2011–2014) yang terhubung dengan **Slicer Region**. Dilengkapi indikator panah hijau/merah (*Custom Error Bars*) dan label persentase *growth* otomatis.
-* **Key Insight:** Penjualan global tumbuh pesat dari **$2.259K (2011)** ke **$2.677K (2012)** (**+18,5%**), namun turun pada **2013** menjadi **$2.384K** (**-11,0%**) akibat krisis *Global Supply Chain Bottleneck*, sebelum akhirnya melonjak tajam pada **2014** mencapai **$4.299K** (**+80,4%**).
+* **Key Insight:** Penjualan global tumbuh pesat dari **$2.259K (2011)** ke **$2.677K (2012)** (**+18,5%**), namun mengalami penurunan sementara pada **2013** menjadi **$2.384K** (**-11,0%**) akibat penyesuaian operasional internal (*internal portfolio & inventory consolidation*). Perusahaan berhasil melakukan re-alokasi strategi hingga mencetak lonjakan omset signifikan pada **2014** mencapai **$4.299K** (**+80,4%**).
 
 ![Chart 1 - Year over Year (YoY) Sales Trend with Percentage Growth & Error Bars](chart1_yoy_trend.jpeg)
 
