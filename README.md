@@ -14,9 +14,13 @@ Analisis ini mencakup deteksi tren tahunan (*YoY Variance*), segmentasi ukuran t
   * **Date Format Standardisation:** Membersihkan karakter *timestamp* (`00:00:00.000`) pada kolom `Order.Date` menjadi format *Short Date* (`YYYY-MM-DD`) pada sheet `Order Data` untuk mengaktifkan hirarki tanggal (*Year, Quarter, Month*) otomatis pada Pivot Table.
 * **Feature Engineering & Data Binning:**
   * **Sales Price Binning (`Group Sales`):** Mengategorikan 51.290 transaksi ke dalam 6 kelompok harga belanja menggunakan *Nested IF*:
-   =IF(Q2<99;"$0-$99";IF(Q2<299;"$100-$299";IF(Q2<499;"$300-$499";IF(Q2<699;"$500-$699";IF(Q2<899;"$700-$899";"$900+")))))
+   ```
+    =IF(Q2<99;"$0-$99";IF(Q2<299;"$100-$299";IF(Q2<499;"$300-$499";IF(Q2<699;"$500-$699";IF(Q2<899;"$700-$899";"$900+")))))
+    ```
   * **Discount Transformation (`Group Discount`):** Mentransformasi variabel diskon desimal menjadi 9 rentang persentase dinamis untuk evaluasi margin:
-   =IF(F2<=10%;"0-10%";IF(F2<=20%;"11-20%";IF(F2<=30%;"21-30%";IF(F2<=40%;"31-40%";IF(F2<=50%;"51-60%";IF(F2<=60%;"61-70%";IF(F2<=70%;"71-80%";IF(F2<=80%;"81-90%";"91%+"))))))))
+   ```
+    =IF(F2<=10%;"0-10%";IF(F2<=20%;"11-20%";IF(F2<=30%;"21-30%";IF(F2<=40%;"31-40%";IF(F2<=50%;"51-60%";IF(F2<=60%;"61-70%";IF(F2<=70%;"71-80%";IF(F2<=80%;"81-90%";"91%+"))))))))
+    ```
   * **Month Mapping:** Ekstraksi nama bulan menggunakan `=TEXT(H2; "mmmm")`.
 * **Advanced Charting Mechanics:**
   * **Custom Error Bars Plotting:** Mengintegrasikan seri *Invisible Bar* dengan *Custom Error Bars* untuk membentuk indikator panah naik-turun (*Variance Arrows*) otomatis.
