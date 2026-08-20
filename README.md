@@ -13,7 +13,7 @@ Analisis ini melacak pertumbuhan tahunan, mengelompokkan nilai transaksi, memeta
   * **Text to Columns Parsing:** Menguraikan data mentah berformat CSV menjadi struktur tabel terpisah yang rapi.
   * **Date Format Standardisation:** Membersihkan karakter *timestamp* (`00:00:00.000`) pada kolom `Order.Date` menjadi format *Short Date* (`YYYY-MM-DD`) pada sheet `Order Data` untuk mengaktifkan hirarki tanggal (*Year, Quarter, Month*) otomatis pada Pivot Table.
 * **Feature Engineering & Data Binning:**
-  * **Sales Price Binning (`Group Sales`):** Mengategorikan 51.290 transaksi ke dalam 6 kelompok harga belanja menggunakan *Nested IF*:
+  * **Sales Price Binning (`Group Sales`):** Mengategorikan 51.285 transaksi ke dalam 6 kelompok harga belanja menggunakan *Nested IF*:
     ```
     =IF(Q2<99;"$0-$99";IF(Q2<299;"$100-$299";IF(Q2<499;"$300-$499";IF(Q2<699;"$500-$699";IF(Q2<899;"$700-$899";"$900+")))))
     ```
@@ -23,7 +23,7 @@ Analisis ini melacak pertumbuhan tahunan, mengelompokkan nilai transaksi, memeta
     ```
   * **Month Mapping:** Ekstraksi nama bulan menggunakan `=TEXT(H2; "mmmm")`.
 * **Advanced Charting Mechanics:**
-  * **Custom Error Bars Plotting:** Mengintegrasikan seri *Invisible Bar* dengan *Custom Error Bars* untuk membentuk indikator panah naik-turun (*Variance Arrows*) otomatis.
+  * **Custom Error Bars Plotting:** Mengintegrasikan seri *Invisible Bar* *Invisible Bar+* dan *Invisible Bar-* dengan *Custom Error Bars* untuk membentuk indikator panah naik-turun (*Variance Arrows*) otomatis.
   * **Dynamic Helper Title:** Mengaitkan judul chart secara dinamis pada sel tersembunyi `U22` dengan Slicer Year.
   * **Form Control Interactivity:** Menggunakan **Developer Scroll Bar** yang dihubungkan dengan rumus pencarian dinamis `=OFFSET(Advanced_Charting_Techniques!A108:B116; 0; 0; $E$105; 2)` untuk menggeser rentang baris data secara langsung di dalam chart.
 * **Conditional Formatting:** Menerapkan *Green Color Scale / Data Bars* pada tabel analisis komposisi regional.
