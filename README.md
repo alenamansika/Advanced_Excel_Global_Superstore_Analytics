@@ -70,3 +70,6 @@ Grafik distribusi frekuensi pelanggan (*# of Customer*) berdasarkan 9 kelompok d
 * **`Order Data`** : Sheet data mentah (*raw data*) 51.285 baris transaksi setelah *cleaning* & *feature engineering*.
 * **`Advanced_Charting_Techniques`** : Sheet utama berisi *staging tables*, Pivot Tables, Slicers, Form Controls, dan 4 *Advanced Dynamic Charts*.
 * 📝 **Medium Article:** [https://medium.com/@alenamansika723/analyzing-global-superstore-dynamic-performance-in-excel-an-advanced-charting-interactive-fed6206a4665?postPublishedType=repub]
+
+## 👤 Author
+- **GitHub:** [@alenamansika](https://github.com/alenamansika)
