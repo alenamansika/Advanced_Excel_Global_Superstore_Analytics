@@ -9,9 +9,6 @@ Analisis ini melacak tren pertumbuhan omset tahunan (2011–2014), mengelompokka
 
 ## 🛠️ Excel Features & Techniques Used
 
-* **Data Cleaning & Standardisation:**
-  * **Locale Transformation:** Membersihkan pergeseran separator desimal & ribuan (US vs Regional ID) pada data numerik `Sales`, `Profit`, dan `Discount`.
-  * **Date Format Standardisation:** Membersihkan karakter *timestamp* pada kolom `Order.Date` menjadi format *Short Date* (`YYYY-MM-DD`) pada sheet `Order Data` untuk mengaktifkan hirarki tanggal (*Year, Quarter, Month*) otomatis pada Pivot Table.
 * **Feature Engineering & Data Binning:**
   * **Sales Price Binning (`Group Sales`):** Mengelompokkan 51.290 transaksi ke dalam 6 rentang harga belanja menggunakan *Nested IF*:
     ```excel
@@ -36,7 +33,7 @@ Analisis ini melacak tren pertumbuhan omset tahunan (2011–2014), mengelompokka
 Menampilkan tren penjualan tahunan global (2011–2014) yang terhubung dengan **Slicer Region**. Dilengkapi indikator panah hijau/merah (*Custom Error Bars*) dan label persentase *growth* otomatis.
 * **Key Insight:** Penjualan global menunjukkan tren pertumbuhan yang konsisten dan berkelanjutan dari **$2.259K (2011)** naik ke **$2.677K (2012)** (**+18,5%**), berlanjut naik ke **$3.405K (2013)** (**+27,2%**), dan mencapai puncak **$4.299K (2014)** (**+26,2%**). Wilayah **Central** mendominasi omset terbesar ($938,4K pada 2014), sedangkan **EMEA (+47,4%)** dan **Southeast Asia (+43,5%)** mencatatkan ekspansi persentase terpesat pada 2013–2014.
 
-![Chart 1 - Year over Year (YoY) Sales Trend with Percentage Growth & Error Bars](Chart 1 - YoY Trend.jpeg)
+![Chart 1 - Year over Year (YoY) Sales Trend with Percentage Growth & Error Bars](chart1_yoy_trend.jpg)
 
 ---
 
@@ -44,7 +41,7 @@ Menampilkan tren penjualan tahunan global (2011–2014) yang terhubung dengan **
 Mengelompokkan 51.290 transaksi ke dalam 6 rentang harga belanja (*price bins*), dilengkapi dengan **Slicer 6-Kolom Horizontal** dan tabel rincian kontribusi *Region* menggunakan *Conditional Formatting Color Scales*.
 * **Key Insight:** Sektor belanja rendah hingga menengah menguasai **80,08%** dari total volume transaksi global (`$0–$99` sebesar **56,19%** dan `$100–$299` sebesar **23,89%**). Terdapat anomali transaksi tinggi pada kelompok **`$900+`** (**5,26%**) yang melampaui kelompok `$500–$699` (4,27%), menandakan adanya aktivitas pembelian inventaris skala besar oleh segmen *Corporate Enterprise*.
 
-![Chart 2 - Interactive Histogram with Regional Breakdown & Slicer](Chart 2 - Histogram.jpeg)
+![Chart 2 - Interactive Histogram with Regional Breakdown & Slicer](chart2_histogram)
 
 ---
 
@@ -52,7 +49,7 @@ Mengelompokkan 51.290 transaksi ke dalam 6 rentang harga belanja (*price bins*),
 *Combination Chart* ganda yang membandingkan total penjualan bulanan per tahun dengan garis pangkal rata-rata musiman bulanan historis (2011–2014) secara dinamis via **Slicer Year**.
 * **Key Insight:** Mengidentifikasi pola musiman bisnis (*seasonality pattern*) yang berulang setiap tahun: penjualan dimulai dari titik terendah pada awal tahun (**Februari $543,8K**), melonjak pada pertengahan tahun (**Juni & Agustus**), dan mencapai Puncak Utama (*Peak Season*) pada kuartal keempat (**November $1.551M** dan **Desember $1.580M**) akibat penyerapan anggaran korporat dan belanja musim liburan.
 
-![Chart 3 - Annual Trend with Monthly Detail & Slicer Year](Chart 3 - Seasonality.jpeg)
+![Chart 3 - Annual Trend with Monthly Detail & Slicer Year](chart3_seasonality)
 
 ---
 
@@ -60,7 +57,7 @@ Mengelompokkan 51.290 transaksi ke dalam 6 rentang harga belanja (*price bins*),
 Grafik distribusi frekuensi pelanggan (*# of Customer*) berdasarkan kelompok diskon yang dapat digeser secara interaktif menggunakan komponen **Form Control Scroll Bar** dan rumus `OFFSET`.
 * **Key Insight:** Penjualan didominasi oleh kelompok diskon rendah **`0–10%` (65,69%)** dan **`11–20%` (12,22%)** yang menjadi penopang utama profitabilitas perusahaan (menyumbang **155,53%** dari total profit). Sebaliknya, pemberian diskon **> 20%** terbukti secara akumulatif menggerus profit sebesar **-55,52%** (menghasilkan profit negatif/rugi).
 
-![Chart 4 - Frequency Distribution Chart with Scroll Bar](Chart 4 - Frequency Scroll Bar.jpeg)
+![Chart 4 - Frequency Distribution Chart with Scroll Bar](chart4_frequency_scrollbar)
 
 ---
 
