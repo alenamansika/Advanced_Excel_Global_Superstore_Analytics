@@ -33,7 +33,7 @@ Analisis ini melacak tren pertumbuhan omset tahunan (2011–2014), mengelompokka
 Menampilkan tren penjualan tahunan global (2011–2014) yang terhubung dengan **Slicer Region**. Dilengkapi indikator panah hijau/merah (*Custom Error Bars*) dan label persentase *growth* otomatis.
 * **Key Insight:** Penjualan global menunjukkan tren pertumbuhan yang konsisten dan berkelanjutan dari **$2.259K (2011)** naik ke **$2.677K (2012)** (**+18,5%**), berlanjut naik ke **$3.405K (2013)** (**+27,2%**), dan mencapai puncak **$4.299K (2014)** (**+26,2%**). Wilayah **Central** mendominasi omset terbesar ($938,4K pada 2014), sedangkan **EMEA (+47,4%)** dan **Southeast Asia (+43,5%)** mencatatkan ekspansi persentase terpesat pada 2013–2014.
 
-<img src="https://raw.githubusercontent.com/alenamansika/Advanced_Excel_Global_Superstore_Analytics/main/Chart%201%20%20-%20YoY%20Trend.jpeg" alt="Chart 1 - YoY Sales Trend" />
+![Chart 1 - YoY Sales Trend](chart1_yoy_trend.jpeg)
 
 ---
 
