@@ -1,8 +1,5 @@
 # 📊 Global Superstore Advanced Analytics (Advanced Excel Interactive Charts)
 
-![Excel](https://img.shields.io/badge/Tools-Microsoft_Excel_&_Advanced_Charting-217346?style=flat&logo=microsoft-excel)
-![Data Integrity](https://img.shields.io/badge/Data_Quality-Validated-brightgreen)
-
 ## 📌 Project Overview
 Proyek ini menganalisis data transaksi e-commerce global dari **Global Superstore Dataset (51.290 transaksi)** menggunakan kombinasi teknik **Advanced Excel Charting, Form Control, & Dynamic Data Lookup** untuk menghasilkan analisis visual yang interaktif, otomatis, dan berstandar industri. 
 
