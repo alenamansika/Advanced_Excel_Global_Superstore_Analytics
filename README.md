@@ -1,7 +1,7 @@
 # 📊 Global Superstore Advanced Analytics (Advanced Excel Interactive Charts)
 
 ## 📌 Project Overview
-Proyek ini menganalisis data transaksi e-commerce global dari **Global Superstore Dataset (51.290 transaksi)** menggunakan kombinasi teknik **Advanced Excel Charting, Form Control, & Dynamic Data Lookup** untuk menghasilkan analisis visual yang interaktif, otomatis, dan berstandar industri. 
+Proyek ini menganalisis data transaksi e-commerce global dari **Global Superstore Dataset (51.284 transaksi)** menggunakan kombinasi teknik **Advanced Excel Charting, Form Control, & Dynamic Data Lookup** untuk menghasilkan analisis visual yang interaktif, otomatis, dan berstandar industri. 
 
 Analisis ini melacak tren pertumbuhan omset tahunan (2011–2014), mengelompokkan nilai keranjang belanja (*price binning*), memetakan pola musiman (*seasonality pattern*), serta mengevaluasi efektivitas dan dampak kebijakan diskon terhadap marjin keuntungan perusahaan.
 
@@ -9,8 +9,9 @@ Analisis ini melacak tren pertumbuhan omset tahunan (2011–2014), mengelompokka
 
 ## 🛠️ Excel Features & Techniques Used
 
-* **Feature Engineering & Data Binning:**
-  * **Sales Price Binning (`Group Sales`):** Mengelompokkan 51.290 transaksi ke dalam 6 rentang harga belanja menggunakan *Nested IF*:
+* **Data Cleaning & Feature Engineering:**
+  * **Missing Value Handling (Data Cleaning):** Menghapus 6 baris data kosong (blank rows) pada variabel utama untuk menjaga integritas data (data integrity), sehingga total data bersih yang dianalisis disesuaikan secara presisi dari 51.290 menjadi 51.284 baris transaksi.
+  * **Sales Price Binning (`Group Sales`):** Mengelompokkan 51.284 transaksi ke dalam 6 rentang harga belanja menggunakan *Nested IF*:
     ```excel
     =IF(Q2<99;"$0-$99";IF(Q2<299;"$100-$299";IF(Q2<499;"$300-$499";IF(Q2<699;"$500-$699";IF(Q2<899;"$700-$899";"$900+")))))
     ```
