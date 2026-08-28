@@ -1,83 +1,227 @@
-# 📊 Global Superstore Advanced Analytics (Advanced Excel Interactive Charts)
+# 📊 Global Superstore Advanced Analytics
 
 ## 📌 Project Overview
-Proyek ini menganalisis data transaksi e-commerce global dari **Global Superstore Dataset (51.284 transaksi)** menggunakan kombinasi teknik **Advanced Excel Charting, Form Control, & Dynamic Data Lookup** untuk menghasilkan analisis visual yang interaktif, otomatis, dan berstandar industri. 
 
-Analisis ini melacak tren pertumbuhan omset tahunan (2011–2014), mengelompokkan nilai keranjang belanja (*price binning*), memetakan pola musiman (*seasonality pattern*), serta mengevaluasi efektivitas dan dampak kebijakan diskon terhadap marjin keuntungan perusahaan.
+Proyek ini merupakan latihan analisis dan visualisasi data menggunakan **Microsoft Excel** dengan fokus pada pembuatan **interactive charts**.
 
----
+Saya menganalisis data transaksi Global Superstore selama periode **2011–2014**. Setelah proses data cleaning, data yang digunakan dalam analisis terdiri dari **51,284 records**.
 
-## 🛠️ Excel Features & Techniques Used
+Dalam proyek ini, saya menggunakan beberapa fitur Advanced Excel untuk membuat visualisasi yang interaktif, termasuk **Slicers, Form Controls, Dynamic Data Lookup, dan Advanced Charting Techniques**.
 
-* **Data Cleaning & Feature Engineering:**
-  * **Missing Value Handling (Data Cleaning):** Menghapus 6 baris data kosong (blank rows) pada variabel utama untuk menjaga integritas data (data integrity), sehingga total data bersih yang dianalisis disesuaikan secara presisi dari 51.290 menjadi 51.284 baris transaksi.
-  * **Sales Price Binning (`Group Sales`):** Mengelompokkan 51.284 transaksi ke dalam 6 rentang harga belanja menggunakan *Nested IF*:
-    ```excel
-    =IF(Q2<99;"$0-$99";IF(Q2<299;"$100-$299";IF(Q2<499;"$300-$499";IF(Q2<699;"$500-$699";IF(Q2<899;"$700-$899";"$900+")))))
-    ```
-  * **Discount Rate Binning (`Group Discount`):** Mentransformasi variabel diskon desimal menjadi kelompok persentase diskon untuk evaluasi marjin:
-    ```excel
-    =IF(F2<=0.1;"0-10%";IF(F2<=0.2;"11-20%";IF(F2<=0.3;"21-30%";IF(F2<=0.4;"31-40%";IF(F2<=0.5;"41-50%";IF(F2<=0.6;"51-60%";IF(F2<=0.7;"61-70%";IF(F2<=0.8;"71-80%";"81%++"))))))))
-    ```
-  * **Month Extraction:** Mengekstrak nama bulan menggunakan `=TEXT(H2; "mmmm")`.
-* **Advanced Charting Mechanics:**
-  * **Custom Error Bars Plotting:** Mengintegrasikan seri *Invisible Bar*, *Invisible Bar+*, dan *Invisible Bar-* dengan *Custom Error Bars (Direction: Plus/Minus)* untuk membentuk indikator panah naik-turun (*Variance Arrows*) otomatis.
-  * **Dynamic Helper Title:** Mengaitkan judul chart secara dinamis pada sel tersembunyi `U22` yang terhubung dengan Slicer Year.
-  * **Form Control Interactivity:** Menggunakan **Developer Scroll Bar** yang dihubungkan dengan rumus pencarian dinamis `=OFFSET(Advanced_Charting_Techniques!A108:B116; 0; 0; $E$105; 2)` untuk menggeser rentang baris data secara langsung di dalam chart.
-* **Conditional Formatting:** Menerapkan *Green Color Scale / Data Bars* pada tabel analisis komposisi regional.
+Analisis digunakan untuk melihat tren pertumbuhan Sales, distribusi nilai transaksi, pola penjualan bulanan, serta hubungan antara tingkat Discount dan Profit berdasarkan data yang tersedia.
 
 ---
 
-## 📈 Interactive Charts Showcase
+## 🗂️ Dataset
 
-### 1. YoY Sales Trend with Percentage Growth & Error Bars
-Menampilkan tren penjualan tahunan global (2011–2014) yang terhubung dengan **Slicer Region**. Dilengkapi indikator panah hijau/merah (*Custom Error Bars*) dan label persentase *growth* otomatis.
-* **Key Insight:** Penjualan global menunjukkan tren pertumbuhan yang konsisten dan berkelanjutan dari **$2.259K (2011)** naik ke **$2.677K (2012)** (**+18,5%**), berlanjut naik ke **$3.405K (2013)** (**+27,2%**), dan mencapai puncak **$4.299K (2014)** (**+26,2%**). Wilayah **Central** mendominasi omset terbesar ($938,4K pada 2014), sedangkan **EMEA (+47,4%)** dan **Southeast Asia (+43,5%)** mencatatkan ekspansi persentase terpesat pada 2013–2014.
+- **Dataset:** Global Superstore Dataset
+- **Source:** Kaggle
+- **Publisher:** Fatih İlhan
+- **Period:** 2011–2014
+- **Records:** 51,284
+
+📎 **Dataset Source:**  
+[Global Superstore Dataset – Kaggle](https://www.kaggle.com/datasets/fatihilhan/global-superstore-dataset)
+
+---
+
+## 🛠️ Data Preparation & Analysis
+
+Beberapa proses yang saya lakukan dalam proyek ini meliputi:
+
+### Data Preparation
+
+- Memeriksa data kosong pada variabel yang digunakan dalam analisis
+- Menghapus 6 baris data kosong sehingga jumlah data yang digunakan menjadi **51,284 records**
+- Memeriksa format dan struktur data
+- Menyesuaikan formatting angka agar nilai Sales lebih mudah dibaca
+
+### Data Transformation
+
+- Membuat **Group Sales** untuk mengelompokkan nilai transaksi ke dalam beberapa rentang harga
+- Membuat **Group Discount** untuk mengelompokkan tingkat Discount ke dalam beberapa interval persentase
+- Mengekstrak informasi **Month** dari kolom Order Date untuk mendukung analisis bulanan
+
+### Analysis & Excel Features
+
+- Menggunakan **PivotTables** untuk membantu proses analisis
+- Menggunakan **Slicers** untuk membuat visualisasi yang dapat difilter secara interaktif
+- Menggunakan **Form Control Scroll Bar** untuk menampilkan data secara dinamis
+- Menggunakan **Dynamic Data Range** dengan fungsi `OFFSET`
+- Membuat dynamic chart title
+- Menggunakan Custom Error Bars untuk membuat indikator perubahan nilai
+- Menggunakan Conditional Formatting untuk mendukung visualisasi data
+- Membuat interactive charts menggunakan Microsoft Excel
+
+---
+
+# 📈 Interactive Charts & Key Insights
+
+## 1️⃣ Year-over-Year Sales Trend
+
+Interactive chart digunakan untuk menampilkan perubahan Sales tahunan selama periode 2011–2014.
+
+Visualisasi dapat difilter berdasarkan Region dan dilengkapi dengan indikator perubahan serta persentase pertumbuhan tahunan.
+
+### 🔍 Key Insight
+
+Berdasarkan data yang dianalisis, Sales menunjukkan peningkatan selama periode 2011–2014.
+
+- **2011:** $2.26M
+- **2012:** $2.68M
+- **2013:** $3.41M
+- **2014:** $4.30M
+
+Sales meningkat sebesar **18.5%** pada 2012, kemudian meningkat sebesar **27.2%** pada 2013 dan **26.2%** pada 2014.
+
+Berdasarkan visualisasi, Sales menunjukkan pertumbuhan positif selama periode analisis.
+
+---
+
+## 2️⃣ Sales Distribution by Transaction Value
+
+Interactive histogram digunakan untuk melihat distribusi transaksi berdasarkan beberapa rentang nilai Sales.
+
+Data transaksi dikelompokkan ke dalam beberapa kelompok nilai, mulai dari **$0–$99** hingga **$900+**.
+
+### 🔍 Key Insight
+
+Berdasarkan distribusi data:
+
+- Kelompok **$0–$99** memiliki proporsi terbesar sebesar **56.19%**
+- Kelompok **$100–$299** memiliki proporsi sebesar **23.89%**
+- Kedua kelompok tersebut secara bersama-sama mencakup **80.08%** dari data transaksi yang dianalisis
+- Kelompok transaksi **$900+** memiliki proporsi sebesar **5.26%**
+
+Hasil ini menunjukkan bahwa sebagian besar transaksi dalam dataset berada pada rentang nilai Sales yang relatif rendah hingga menengah.
+
+---
+
+## 3️⃣ Monthly Sales Trend & Seasonality
+
+Combination Chart digunakan untuk membandingkan pola Sales bulanan dan melihat perubahan pola penjualan berdasarkan tahun.
+
+Visualisasi juga digunakan untuk melihat pola historis penjualan dari Januari hingga Desember.
+
+### 🔍 Key Insight
+
+Berdasarkan data historis, Sales menunjukkan perubahan nilai sepanjang tahun.
+
+- **Februari** mencatat Sales sebesar **$543.8K**
+- Sales kembali meningkat pada beberapa bulan berikutnya
+- **November** mencatat Sales sebesar **$1.55M**
+- **Desember** mencatat Sales sebesar **$1.58M**
+
+November dan Desember memiliki nilai Sales tertinggi dalam data yang dianalisis.
+
+Pola ini menunjukkan adanya peningkatan Sales menjelang akhir tahun pada data historis yang tersedia.
+
+---
+
+## 4️⃣ Discount Distribution & Profit Analysis
+
+Interactive chart digunakan untuk melihat distribusi data berdasarkan kelompok Discount.
+
+Visualisasi dapat digeser menggunakan **Form Control Scroll Bar** untuk menampilkan kelompok data secara dinamis.
+
+### 🔍 Key Insight
+
+Berdasarkan hasil analisis:
+
+- Kelompok Discount **0–10%** mencakup **65.69%** dari data yang dianalisis
+- Kelompok Discount **11–20%** mencakup **12.22%**
+- Kelompok transaksi dengan Discount rendah memberikan kontribusi positif terhadap Profit
+- Kelompok dengan Discount di atas **20%** menunjukkan adanya kontribusi Profit negatif dalam hasil analisis
+
+Hasil ini menunjukkan bahwa hubungan antara Discount dan Profit dapat menjadi area yang menarik untuk dianalisis lebih lanjut.
+
+---
+
+## 💡 Analytical Considerations
+
+Berdasarkan hasil analisis, terdapat beberapa hal yang dapat menjadi pertimbangan untuk analisis lebih lanjut:
+
+- Hubungan antara Discount dan Profit dapat dievaluasi lebih lanjut untuk memahami dampak Discount terhadap profitabilitas.
+- Distribusi nilai transaksi dapat digunakan untuk mengeksplorasi pola Sales berdasarkan kelompok nilai yang berbeda.
+- Pola peningkatan Sales menjelang akhir tahun dapat digunakan sebagai dasar untuk mengeksplorasi pola musiman dalam data.
+- Perbedaan pertumbuhan Sales antar-Region dapat dianalisis lebih lanjut untuk memahami variasi performa berdasarkan wilayah.
+
+> **Note:** Temuan dalam proyek ini didasarkan pada data dan variabel yang tersedia dalam dataset. Hasil analisis menunjukkan pola pada data historis dan tidak digunakan sebagai dasar untuk menentukan keputusan bisnis secara langsung.
+
+---
+
+# 🖼️ Project Preview
+
+### 1. YoY Sales Trend with Percentage Growth
 
 ![Chart 1 - YoY Sales Trend](chart1_yoy_trend.jpeg)
 
----
-
-### 2. Interactive Histogram with Regional Breakdown
-Mengelompokkan 51.290 transaksi ke dalam 6 rentang harga belanja (*price bins*), dilengkapi dengan **Slicer 6-Kolom Horizontal** dan tabel rincian kontribusi *Region* menggunakan *Conditional Formatting Color Scales*.
-* **Key Insight:** Sektor belanja rendah hingga menengah menguasai **80,08%** dari total volume transaksi global (`$0–$99` sebesar **56,19%** dan `$100–$299` sebesar **23,89%**). Terdapat anomali transaksi tinggi pada kelompok **`$900+`** (**5,26%**) yang melampaui kelompok `$500–$699` (4,27%), menandakan adanya aktivitas pembelian inventaris skala besar oleh segmen *Corporate Enterprise*.
+### 2. Interactive Histogram
 
 ![Chart 2 - Interactive Histogram](Chart%202%20-%20Histogram.jpeg)
 
----
-
-### 3. Annual Trend with Monthly Detail (Seasonality Benchmark)
-*Combination Chart* ganda yang membandingkan total penjualan bulanan per tahun dengan garis pangkal rata-rata musiman bulanan historis (2011–2014) secara dinamis via **Slicer Year**.
-* **Key Insight:** Mengidentifikasi pola musiman bisnis (*seasonality pattern*) yang berulang setiap tahun: penjualan dimulai dari titik terendah pada awal tahun (**Februari $543,8K**), melonjak pada pertengahan tahun (**Juni & Agustus**), dan mencapai Puncak Utama (*Peak Season*) pada kuartal keempat (**November $1.551M** dan **Desember $1.580M**) akibat penyerapan anggaran korporat dan belanja musim liburan.
+### 3. Monthly Sales Trend & Seasonality
 
 ![Chart 3 - Annual Trend](Chart%203%20-%20Seasonality.jpeg)
 
----
-
-### 4. Frequency Distribution Chart with Scroll Bar (Form Control)
-Grafik distribusi frekuensi pelanggan (*# of Customer*) berdasarkan kelompok diskon yang dapat digeser secara interaktif menggunakan komponen **Form Control Scroll Bar** dan rumus `OFFSET`.
-* **Key Insight:** Penjualan didominasi oleh kelompok diskon rendah **`0–10%` (65,69%)** dan **`11–20%` (12,22%)** yang menjadi penopang utama profitabilitas perusahaan (menyumbang **155,53%** dari total profit). Sebaliknya, pemberian diskon **> 20%** terbukti secara akumulatif menggerus profit sebesar **-55,52%** (menghasilkan profit negatif/rugi).
+### 4. Interactive Frequency Distribution
 
 ![Chart 4 - Frequency Distribution](Chart%204%20-%20Frequency%20Scroll%20Bar.jpeg)
 
 ---
 
-## 💡 Summary of Strategic Recommendations
-1. **Discount Capping (Max 20%):** Membatasi diskon maksimal 20% untuk transaksi umum dan menerapkan *bundling* dengan kategori ber-marjin tinggi seperti **Technology (13,99%)**.
-2. **AOV Improvement:** Mendorong kenaikan *basket size* transaksi dari rentang $0–$99 (56,19%) naik ke $100–$299 melalui program *Up-selling* & *Cross-selling*.
-3. **Seasonality Inventory Planning:** Mempersiapkan stok dan armada logistik sejak bulan **Agustus–September** untuk mengantisipasi puncak lonjakan transaksi di Q4 (November–Desember).
-4. **Regional Budget Allocation:** Mempertahankan ketersediaan stok di wilayah utama (**Central, South, North**) serta meningkatkan investasi pemasaran pada wilayah dengan pertumbuhan persentase tertinggi (**EMEA** dan **Southeast Asia**).
+# 📁 Workbook Structure
+
+**Order Data:** Berisi data transaksi yang digunakan dalam proses analisis.
+
+**Advanced_Charting_Techniques:** Berisi proses analisis, staging tables, PivotTables, Slicers, Form Controls, dan interactive charts.
+
+📄 **Main File:**  
+`Advanced_Excel_Global_Superstore_Analytics.xlsx`
 
 ---
 
-## 📁 Repository Structure
+# 🧰 Tools & Skills Demonstrated
 
-* 📊 `Advanced_Excel_Global_Superstore_Analytics.xlsx` : File kerja utama Excel.
-* 📄 **`Order Data`** : Sheet data mentah (*raw data*) 51.290 baris transaksi setelah *cleaning* & *feature engineering*.
-* 📈 **`Advanced_Charting_Techniques`** : Sheet utama berisi *staging tables*, Pivot Tables, Slicers, Form Controls, dan 4 *Advanced Dynamic Charts*.
+**Tool Used:** Microsoft Excel
+
+**Skills & Techniques:**
+
+- Data Cleaning
+- Data Preparation
+- Data Transformation
+- Feature Engineering
+- Nested IF
+- Date Manipulation
+- PivotTables
+- Interactive Slicers
+- Form Controls
+- Dynamic Data Range
+- OFFSET Function
+- Custom Error Bars
+- Conditional Formatting
+- Data Visualization
+- Trend Analysis
+- Seasonality Analysis
+- Sales Analysis
+- Discount Analysis
+- Interactive Chart Development
 
 ---
 
-## 👤 Author
-- **GitHub:** [@alenamansika](https://github.com/alenamansika)
-- **LinkedIn:** (https://www.linkedin.com/in/alenamansika)*
+# 🎯 Project Takeaways
+
+Melalui proyek ini, saya berlatih menggunakan fitur Advanced Excel untuk membuat visualisasi data yang lebih interaktif.
+Proyek ini membantu saya memahami bagaimana data dapat diolah menjadi visualisasi yang dapat dieksplorasi melalui filter dan interactive controls.
+
+Proses yang dilakukan dalam proyek ini meliputi:
+**Raw Data → Data Preparation → Data Transformation → Analysis → Interactive Visualization**
+
+---
+
+# 👤 Author
+
+**Alena Mansika**
+
+- 💻 **GitHub:** [@alenamansika](https://github.com/alenamansika)
+- 💼 **LinkedIn:** [Alena Mansika](https://www.linkedin.com/in/alenamansika)
