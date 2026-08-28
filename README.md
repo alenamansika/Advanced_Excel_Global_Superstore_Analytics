@@ -166,7 +166,7 @@ Berdasarkan hasil analisis, terdapat beberapa hal yang dapat menjadi pertimbanga
 
 ### 4. Interactive Frequency Distribution
 
-![Chart 4 - Frequency Distribution](Chart%204%20-%20Frequency%20Scroll%20Bar.jpeg)
+![Chart 4 - Frequency Distribution](Chart%204%20-%20Frequency%20ScrollBar.jpeg)
 
 ---
 
