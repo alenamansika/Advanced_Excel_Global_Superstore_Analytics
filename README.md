@@ -75,7 +75,6 @@ Grafik distribusi frekuensi pelanggan (*# of Customer*) berdasarkan kelompok dis
 * 📊 `Advanced_Excel_Global_Superstore_Analytics.xlsx` : File kerja utama Excel.
 * 📄 **`Order Data`** : Sheet data mentah (*raw data*) 51.290 baris transaksi setelah *cleaning* & *feature engineering*.
 * 📈 **`Advanced_Charting_Techniques`** : Sheet utama berisi *staging tables*, Pivot Tables, Slicers, Form Controls, dan 4 *Advanced Dynamic Charts*.
-* 📝 **Full Article & Case Study on Medium:** [Analyzing Global Superstore Dynamic Performance in Excel](https://medium.com/@alenamansika723/analyzing-global-superstore-dynamic-performance-in-excel-an-advanced-charting-interactive-fed6206a4665?postPublishedType=repub)
 
 ---
 
